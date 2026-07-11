@@ -28,6 +28,8 @@ jobs:
           sudo apt-get -y install tree-sitter-cli
       - name: Test
         run: |
+          tree-sitter generate
+          tree-sitter build
           tree-sitter test
 
   deploy-npm:
