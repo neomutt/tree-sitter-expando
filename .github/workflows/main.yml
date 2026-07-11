@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get -y update
-          sudo apt-get -y install tree-sitter
+          sudo apt-get -y install tree-sitter-cli
       - name: Test
         run: |
           tree-sitter test
