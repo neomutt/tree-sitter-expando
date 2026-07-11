@@ -22,14 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          registry-url: https://registry.npmjs.org
       - name: Install dependencies
         run: |
-          sudo apt-get -y update
-          sudo apt-get -y install tree-sitter-cli
+          npm install -g tree-sitter-cli
       - name: Test
         run: |
-          tree-sitter generate
-          tree-sitter build
           tree-sitter test
 
   deploy-npm:
