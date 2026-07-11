@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "expando",
+      "camelcase": "Expando",
+      "title": "Expando",
+      "scope": "source.expando",
+      "file-types": [
+        "expando"
+      ],
+      "injection-regex": "^expando$",
+      "class-name": "TreeSitterExpando"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "muttrc expando",
+    "authors": [
+      {
+        "name": "Wu",
+        "email": "wuzhenyu@ustc.edu",
+        "url": "https://github.com/Freed-Wu"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/neomutt/tree-sitter-expando",
+      "funding": "https://github.com/neomutt/tree-sitter-expando"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": true
+  }
+}

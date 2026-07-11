@@ -1,0 +1,34 @@
+===============================
+Commands
+===============================
+%Z is%* %{unseen-count} %<S?%<S?1>&%?S?1?>
+
+---
+
+(pattern
+  (variable
+    (simple_expansion))
+  (character)
+  (character)
+  (character)
+  (variable
+    (padding))
+  (variable
+    (expansion))
+  (character)
+  (variable
+    (if
+      (condition)
+      (pattern
+        (variable
+          (if
+            (condition)
+            (pattern
+              (character)))))
+      (pattern
+        (variable
+          (if
+            (condition)
+            (pattern
+              (character)))))))
+  (character))
