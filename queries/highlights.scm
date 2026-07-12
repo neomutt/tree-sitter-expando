@@ -12,12 +12,10 @@
 
 "%" @punctuation.special
 
-(padding_type) @operator
-
-(padding_character) @variable
-
-(simple_expansion) @property
-
-(expansion) @property
-
-(condition) @property
+[
+  (padding_type)
+  (padding_character)
+  (simple_expansion)
+  (expansion)
+  (condition)
+] @operator
