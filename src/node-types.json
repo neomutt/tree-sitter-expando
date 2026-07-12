@@ -57,10 +57,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "character",
+          "type": "user_variable",
           "named": true
         },
         {
@@ -74,6 +74,21 @@
     "type": "simple_expansion",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "user_variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "variable",
@@ -103,6 +118,10 @@
     }
   },
   {
+    "type": "$",
+    "named": false
+  },
+  {
     "type": "%",
     "named": false
   },
@@ -115,15 +134,15 @@
     "named": false
   },
   {
-    "type": "character",
-    "named": true
-  },
-  {
     "type": "condition",
     "named": true
   },
   {
     "type": "end_if",
+    "named": true
+  },
+  {
+    "type": "identifier",
     "named": true
   },
   {

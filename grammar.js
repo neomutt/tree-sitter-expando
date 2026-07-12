@@ -13,11 +13,16 @@ export default grammar({
   rules: {
     pattern: $ => repeat1(
       choice(
-        $.character,
+        $._character,
+        $.user_variable,
         $.variable,
       ),
     ),
-    character: _ => token.immediate(/[^%]/),
+    _character: _ => token.immediate(/[^%$]/),
+    user_variable: $ => seq(
+      '$',
+      alias(token.immediate(/[_a-zA-Z]+/), $.identifier),
+    ),
     variable: $ => choice(
       $.simple_expansion,
       $.expansion,

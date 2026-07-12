@@ -12,6 +12,8 @@
 
 "%" @punctuation.special
 
+(identifier) @variable
+
 [
   (padding_type)
   (padding_character)

@@ -9,7 +9,11 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "character"
+            "name": "_character"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "user_variable"
           },
           {
             "type": "SYMBOL",
@@ -18,12 +22,33 @@
         ]
       }
     },
-    "character": {
+    "_character": {
       "type": "IMMEDIATE_TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[^%]"
+        "value": "[^%$]"
       }
+    },
+    "user_variable": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "IMMEDIATE_TOKEN",
+            "content": {
+              "type": "PATTERN",
+              "value": "[_a-zA-Z]+"
+            }
+          },
+          "named": true,
+          "value": "identifier"
+        }
+      ]
     },
     "variable": {
       "type": "CHOICE",
