@@ -17,7 +17,15 @@
           "named": true
         },
         {
+          "type": "end_if",
+          "named": true
+        },
+        {
           "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "start_if",
           "named": true
         }
       ]
@@ -26,7 +34,21 @@
   {
     "type": "padding",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "padding_character",
+          "named": true
+        },
+        {
+          "type": "padding_type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "pattern",
@@ -85,35 +107,7 @@
     "named": false
   },
   {
-    "type": "%*",
-    "named": false
-  },
-  {
-    "type": "%<",
-    "named": false
-  },
-  {
-    "type": "%>",
-    "named": false
-  },
-  {
-    "type": "%?",
-    "named": false
-  },
-  {
-    "type": "%{",
-    "named": false
-  },
-  {
-    "type": "%|",
-    "named": false
-  },
-  {
     "type": "&",
-    "named": false
-  },
-  {
-    "type": ">",
     "named": false
   },
   {
@@ -127,6 +121,26 @@
   {
     "type": "condition",
     "named": true
+  },
+  {
+    "type": "end_if",
+    "named": true
+  },
+  {
+    "type": "padding_character",
+    "named": true
+  },
+  {
+    "type": "padding_type",
+    "named": true
+  },
+  {
+    "type": "start_if",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
   },
   {
     "type": "}",

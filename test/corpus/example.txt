@@ -1,34 +1,49 @@
 ===============================
 Commands
 ===============================
-%Z is%* %{unseen-count} %<S?%<S?1>&%?S?1?>
+%%%Z is %{unseen-count}
+%*-%<S?%<N?new>&%?n?old?>
 
 ---
-
 (pattern
+  (variable
+    (simple_expansion))
   (variable
     (simple_expansion))
   (character)
   (character)
   (character)
-  (variable
-    (padding))
+  (character)
   (variable
     (expansion))
   (character)
   (variable
+    (padding
+      (padding_type)
+      (padding_character)))
+  (variable
     (if
+      (start_if)
       (condition)
       (pattern
         (variable
           (if
+            (start_if)
             (condition)
             (pattern
-              (character)))))
+              (character)
+              (character)
+              (character))
+            (end_if))))
       (pattern
         (variable
           (if
+            (start_if)
             (condition)
             (pattern
-              (character)))))))
+              (character)
+              (character)
+              (character))
+            (end_if))))
+      (end_if)))
   (character))

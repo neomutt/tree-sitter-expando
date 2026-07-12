@@ -30,22 +30,25 @@ export default grammar({
       /[^\{*>|<?]/,
     ),
     expansion: _ => seq(
-      '%{',
+      '%',
+      token.immediate('{'),
       /[^}]+/,
       '}',
     ),
-    padding: _ => seq(
-      choice('%*', '%>', '%|'),
-      token.immediate(/./),
+    padding: $ => seq(
+      '%',
+      alias(token.immediate(choice('*', '>', '|')), $.padding_type),
+      alias(token.immediate(/./), $.padding_character),
     ),
     condition: _ => /[^}?]+/,
     if: $ => seq(
-      choice('%<', '%?'),
+      '%',
+      alias(token.immediate(choice('<', '?')), $.start_if),
       $.condition,
       '?',
       $.pattern,
       optional(seq('&', $.pattern)),
-      choice('>', '?'),
+      alias(choice('>', '?'), $.end_if),
     ),
   }
 });
