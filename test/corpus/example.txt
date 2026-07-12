@@ -1,8 +1,7 @@
 ===============================
-Commands
+Expansion
 ===============================
 %%%Z is %{unseen-count}
-%*-%<S?%<N?new>&%?n?old?>
 
 ---
 (pattern
@@ -10,17 +9,16 @@ Commands
     (simple_expansion))
   (variable
     (simple_expansion))
-  (character)
-  (character)
-  (character)
-  (character)
   (variable
-    (expansion))
-  (character)
-  (variable
-    (padding
-      (padding_type)
-      (padding_character)))
+    (expansion)))
+
+===============================
+Nested If
+===============================
+%<S?%<N?new>&%?n?old?>
+
+---
+(pattern
   (variable
     (if
       (start_if)
@@ -30,20 +28,27 @@ Commands
           (if
             (start_if)
             (condition)
-            (pattern
-              (character)
-              (character)
-              (character))
+            (pattern)
             (end_if))))
       (pattern
         (variable
           (if
             (start_if)
             (condition)
-            (pattern
-              (character)
-              (character)
-              (character))
+            (pattern)
             (end_if))))
-      (end_if)))
-  (character))
+      (end_if))))
+
+===============================
+Padding
+===============================
+%>-$var
+
+---
+(pattern
+  (variable
+    (padding
+      (padding_type)
+      (padding_character)))
+  (user_variable
+    (identifier)))
