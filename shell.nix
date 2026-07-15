@@ -7,5 +7,8 @@ mkShell {
   name = "tree-sitter-expando";
   buildInputs = [
     tree-sitter
+    bun
+    cargo
+    uv
   ];
 }
