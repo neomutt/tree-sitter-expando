@@ -40,4 +40,5 @@ end
 build = {
   type = "treesitter-parser",
   lang = "expando",
+  generate = true,
 }
