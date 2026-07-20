@@ -43,10 +43,7 @@
 
 [![luarocks](https://img.shields.io/luarocks/v/Freed-Wu/tree-sitter-expando)](https://luarocks.org/modules/Freed-Wu/tree-sitter-expando)
 
-Syntax highlight for expando.
+[expando](https://neomutt.org/man/neomuttrc) grammar for
+[tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-An optional dependency for
-[tree-sitter-muttrc](https://github.com/neomutt/tree-sitter-muttrc).
-
-If you don't want to install nodejs to generate `src/grammar.json`,
-use branch [main](https://github.com/neomutt/tree-sitter-expando/tree/main).
+Refer [tree-sitter-muttrc](https://github.com/neomutt/tree-sitter-muttrc).
