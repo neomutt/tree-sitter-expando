@@ -49,4 +49,4 @@ An optional dependency for
 [tree-sitter-muttrc](https://github.com/neomutt/tree-sitter-muttrc).
 
 If you don't want to install nodejs to generate `src/grammar.json`,
-use [release](https://github.com/neomutt/tree-sitter-expando/tree/release).
+use branch [main](https://github.com/neomutt/tree-sitter-expando/tree/main).
