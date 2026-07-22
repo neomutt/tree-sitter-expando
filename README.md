@@ -45,5 +45,4 @@
 
 [expando](https://neomutt.org/man/neomuttrc) grammar for
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
-
-Refer [tree-sitter-muttrc](https://github.com/neomutt/tree-sitter-muttrc).
+Used by [tree-sitter-muttrc](https://github.com/neomutt/tree-sitter-muttrc).
